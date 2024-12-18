@@ -1,0 +1,19 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Nasz Asortyment - Sklep Wędkarski "Żyłka"{% endblock %}
+
+{% block content %}
+    <h1>Nasz Asortyment</h1>
+    <div class="image-placeholder">
+        <img src="{% static 'images/rod_and_reel.jpg' %}" alt="Nasze produkty wędkarskie">
+    </div>
+    <p>W naszym sklepie znajdziesz szeroki wybór produktów wędkarskich, od wędek, przez kołowrotki, po akcesoria, które pomogą Ci w udanych połowach!</p>
+
+    {% for service in services %}
+        <div class="service-item">
+            <h2>{{ service.name }}</h2>
+            <p>{{ service.description }}</p>
+            <p>Cena: {{ service.price }} PLN</p>
+        </div>
+    {% endfor %}
+{% endblock %}

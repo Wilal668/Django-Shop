@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>{% block title %}Sklep Wędkarski "Żyłka"{% endblock %}</title>
+</head>
+<body>
+
+    <!-- Nagłówek -->
+    <header>
+        <div class="logo">
+            <h1>Sklep Wędkarski "Żyłka"</h1>
+        </div>
+        <!-- Nawigacja -->
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="menu" class="menu">
+                <li><a href="{% url 'home' %}">Strona Główna</a></li>
+                <li><a href="{% url 'services' %}">Asortyment</a></li>
+                <li><a href="{% url 'calculator' %}">Kalkulator Zamówienia</a></li>
+                <li><a href="{% url 'clicker' %}">Zamówienia</a></li>
+                <li><a href="{% url 'about' %}">O Nas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Główna zawartość -->
+    <main class="main-content">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <!-- Stopka -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Sklep Wędkarski "Żyłka". Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+
+    <script>
+        // Obsługa hamburger menu
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

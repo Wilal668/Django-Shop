@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Zamówienie - Sklep Wędkarski "Żyłka"{% endblock %}
+
+{% block content %}
+    <h1>Złóż Zamówienie</h1>
+    <p>Wybierz produkty, które chcesz zamówić, a następnie kliknij przycisk, aby dodać je do koszyka.</p>
+    
+    <button id="click-button">Dodaj Wędkę do Koszyka</button>
+    
+    <p>Liczba zamówionych produktów: <span id="click-count">0</span></p>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/clicker.js' %}"></script>
+{% endblock %}

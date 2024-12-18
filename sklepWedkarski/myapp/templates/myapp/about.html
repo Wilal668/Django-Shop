@@ -1,0 +1,12 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}O Nas{% endblock %}
+
+{% block content %}
+    <h1>O Naszym Sklepie Wędkarskim</h1>
+    <p>Sklep Wędkarski "Żyłka" to miejsce, gdzie pasja do wędkarstwa spotyka się z doświadczeniem i jakością.</p>
+    <div class="image-placeholder">
+        <img src="{% static 'images/aboutfoto.jpg' %}" alt="Nasz sklep wędkarski">
+    </div>
+    <p>Oferujemy szeroki wybór sprzętu wędkarskiego, od wędek i kołowrotków po akcesoria niezbędne do każdego wypadu nad wodę. Nasze produkty pochodzą od renomowanych producentów, a nasza obsługa służy fachową pomocą w doborze odpowiednich akcesoriów.</p>
+{% endblock %}

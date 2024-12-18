@@ -1,0 +1,21 @@
+// Import zmiennych
+@import 'variables';
+
+.service-item {
+    padding: 1em;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 1em;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    h2 {
+        color: $service-heading-color;
+    }
+
+    p {
+        font-size: 1em;
+        color: #555;
+    }
+}

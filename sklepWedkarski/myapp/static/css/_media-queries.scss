@@ -1,0 +1,31 @@
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav .menu {
+        flex-direction: column;
+        width: 100%;
+
+        li {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .container {
+        padding: 1em;
+        margin: 1em;
+    }
+
+    .calculator {
+        width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .image-placeholder img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+    }
+}

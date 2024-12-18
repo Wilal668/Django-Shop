@@ -1,0 +1,11 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Strona Główna{% endblock %}
+
+{% block content %}
+    <h1>Witamy w Sklepie Wędkarskim Żyłka!</h1>
+    <p>Najlepszy sprzęt wędkarski w mieście – wszystko, czego potrzebujesz do udanej wyprawy!</p>
+    <div class="image-placeholder">
+        <img src="{% static 'images/wedkarskie_home.jpg' %}" alt="Sprzęt wędkarski">
+    </div>
+{% endblock %}
